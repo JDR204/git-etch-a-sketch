@@ -11,3 +11,15 @@ for (let i = 0; i < gridSize; i++) {
         column.appendChild(box);
     }
 }
+
+const boxes = document.querySelectorAll(".box");
+boxes.forEach((div) => {
+        div.addEventListener("mouseover", e => {
+            e.target.classList.add("hoverEffect");
+            console.log(e);
+    });
+        div.addEventListener("mouseout", e => {
+            e.target.classList.remove("hoverEffect");
+            console.log(e);
+        });
+});
